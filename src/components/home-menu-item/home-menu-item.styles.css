@@ -1,0 +1,14 @@
+.home-menu-item {
+  border: solid black 1px;
+  margin: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.title {
+  color: darkblue;
+}
