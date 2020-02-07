@@ -1,18 +1,20 @@
 import React from 'react';
+import HomeMenu from './components/home-menu/home-menu.component.jsx';
+import './App.styles.css';
 
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-
+      homeMenuList: ['HATS', 'JACKETS', 'SNEAKERS', 'WOMENS', 'MENS']
     }
   }
 
   render() {
     return (
       <div>
-        hello world
+        <HomeMenu homeMenuList={this.state.homeMenuList} />
       </div>
     )
   }
