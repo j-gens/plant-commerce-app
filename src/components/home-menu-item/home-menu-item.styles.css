@@ -7,24 +7,43 @@
   flex: 1 1 auto;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.large {
+  height: 340px;
+}
+
+.background-image {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.background-image:hover {
+  transform: scale(1.1);
 }
 
 .content {
   display: flex;
   flex-direction: column;
   border: solid black 1px;
-  margin: 30px;
-  padding: 0 30px 10px;
+  height: 90px;
+  padding: 10px 30px;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba(245, 245, 245, 0.60);
+  position: absolute;
 }
 
 .title {
   color: darkblue;
-  font-weight: 600;
-  font-size: 24px;
+  font-size: 32px;
+  margin: 0;
 }
 
 .sub-title {
-  font-size: 16px;
+  font-size: 24px;
 }
