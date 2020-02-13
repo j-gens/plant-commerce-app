@@ -2,3 +2,8 @@
   padding: 20px 40px;
   font-family: 'Heebo', sans-serif;
 }
+
+.homepage a {
+  text-decoration: none;
+  color: black;
+}
