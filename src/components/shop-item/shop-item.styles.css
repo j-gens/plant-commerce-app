@@ -1,0 +1,25 @@
+.shop-item-bin {
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  width: 23%;
+}
+
+.shop-item-image {
+  height: 95%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 5px;
+}
+
+.shop-item-image:hover {
+  opacity: 0.5;
+}
+
+.shop-item-text {
+  display: flex;
+  justify-content: space-between;
+  height: 5%;
+  font-size: 18px;
+}
