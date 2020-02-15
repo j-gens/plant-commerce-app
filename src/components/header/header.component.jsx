@@ -6,7 +6,9 @@ import './header.styles.css';
 
 const Header = () => (
   <div className="header-bin">
-    <Link to="/">LOGO</Link>
+    <div className="header-logo">
+      <Link to="/">LOGO</Link>
+    </div>
     <div className="header-text">
       <Link to="/shop">SHOP</Link>
       <Link to="/contact">CONTACT</Link>
