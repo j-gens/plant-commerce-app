@@ -13,7 +13,7 @@ class SignIn extends React.Component {
   }
 
   handleChange = e => {
-    const [ value, name ] = e.target;
+    const { name, value } = e.target;
     this.setState({ [name]: value });
   }
 
