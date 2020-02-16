@@ -3,8 +3,10 @@ import React from 'react';
 import './form-input.styles.css';
 
 
-const FormInput = () => (
-  <div></div>
+const FormInput = ({ handleChange, label, ...otherProps }) => (
+  <div className="group">
+
+  </div>
 );
 
 
