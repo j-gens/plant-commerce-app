@@ -3,10 +3,10 @@ import React from 'react';
 import './form-button.styles.css';
 
 
-const FormButton = (props) => (
-  <div>
-
-  </div>
+const FormButton = ({ children, ...otherProps }) => (
+  <button className="form-button" {...otherProps} >
+    {children.toUpperCase()}
+  </button>
 );
 
 
