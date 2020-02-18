@@ -45,12 +45,9 @@ class SignIn extends React.Component {
             handleChange={this.handleChange}
             label="Password"
           />
-          <FormButton
-            name="click here"
-            type="submit"
-            value="submit me"
-          />
-
+          <FormButton type="submit">
+            sign in
+          </FormButton>
         </form>
 
       </div>
