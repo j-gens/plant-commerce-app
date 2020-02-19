@@ -3,8 +3,8 @@ import React from 'react';
 import './form-button.styles.css';
 
 
-const FormButton = ({ children, ...otherProps }) => (
-  <button className="form-button" {...otherProps} >
+const FormButton = ({ children, isGoogleSignIn, ...otherProps }) => (
+  <button className={`${isGoogleSignIn ? 'google-sign-in' : ''} form-button`} {...otherProps} >
     {children.toUpperCase()}
   </button>
 );
