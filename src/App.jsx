@@ -21,12 +21,14 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
-      // if user is signed in - check if user is in db
-      if (user) {
-        const userReference = await createUserProfileDoc(user);
-        // listen for document data changes
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuthObj => {
+      // if user is signed in [not null] check if user is in db
+      if (userAuthObj) {
+        // check if the snapshot has changed
+        const userReference = await createUserProfileDoc(userAuthObj);
+        // listen for document data changes -- like .onAuthStateChanged()
         userReference.onSnapshot(snapShot => {
+          // expect displayName, email, and createdAt properties in .data()
           this.setState({
             currentUser: {
               id: snapShot.id,
@@ -34,9 +36,9 @@ class App extends React.Component {
             }
           });
         });
+      } else {
+        this.setState({ currentUser: userAuthObj });
       }
-
-      this.setState({ currentUser: user });
     });
   }
 
