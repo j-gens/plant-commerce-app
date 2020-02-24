@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ShopItem from '../shop-item/shop-item.component.jsx';
+
 import './shop-preview.styles.css';
 
 

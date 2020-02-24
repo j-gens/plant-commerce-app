@@ -2,6 +2,7 @@ import React from 'react';
 
 import ShopPreview from '../shop-preview/shop-preview.component.jsx';
 import SHOP_DATA from '../../data/shopData.js';
+
 import './shop-menu.styles.css';
 
 

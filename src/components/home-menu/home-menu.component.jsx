@@ -1,6 +1,7 @@
 import React from 'react';
 
 import HomeMenuItem from '../home-menu-item/home-menu-item.component.jsx'
+
 import './home-menu.styles.css'
 
 
