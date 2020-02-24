@@ -17,6 +17,34 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+// take userAuth object from sign-in and store inside db
+// async bc api request
+export const createUserProfileDoc = async (userObj, additionalData) => {
+  // only want to perform save to db if we have userObj (get null when user signs out)
+  if (!userObj) return;
+  // if exists, query firestore to see if already stored as a doc
+  const userReference = firestore.doc(`users/${userObj.uid}`);
+  // get document snapshot object (with exists property)
+  const snapShot = await userReference.get();
+  // if it doesn't exist, we want to create it with the doc reference
+  if (!snapShot.exists) {
+    const { displayName, email } = userObj;
+    const createdAt = new Date();
+    // async request to store information in db
+    try {
+      await userReference.set({
+        displayName,
+        email,
+        createdAt,
+        ...additionalData
+      });
+    } catch (error) {
+      console.log('error creating user', error.message);
+    }
+  }
+  return userReference;
+};
+
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
