@@ -17,6 +17,11 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+
+
 // take userAuth object from sign-in and store inside db
 // async bc api request
 export const createUserProfileDoc = async (userObj, additionalData) => {
@@ -36,7 +41,7 @@ export const createUserProfileDoc = async (userObj, additionalData) => {
         displayName,
         email,
         createdAt,
-        ...additionalData
+        ...additionalData,
       });
     } catch (error) {
       console.log('error creating user', error.message);
@@ -44,10 +49,6 @@ export const createUserProfileDoc = async (userObj, additionalData) => {
   }
   return userReference;
 };
-
-
-export const auth = firebase.auth();
-export const firestore = firebase.firestore();
 
 
 const provider = new firebase.auth.GoogleAuthProvider();
