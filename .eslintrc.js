@@ -22,6 +22,5 @@ module.exports = {
     'react',
   ],
   rules: {
-    'consistent-return': 1,
   },
 };

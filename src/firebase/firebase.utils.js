@@ -26,7 +26,7 @@ export const firestore = firebase.firestore();
 // async bc api request
 export const createUserProfileDoc = async (userObj, additionalData) => {
   // only want to perform save to db if we have userObj (get null when user signs out)
-  if (!userObj) return;
+  if (!userObj) return null;
   // if exists, query firestore to see if already stored as a doc
   const userReference = firestore.doc(`users/${userObj.uid}`);
   // get document snapshot object (with exists property)
