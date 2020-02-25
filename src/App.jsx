@@ -7,7 +7,7 @@ import HomeMenu from './components/home-menu/home-menu.component.jsx';
 import ShopMenu from './components/shop-menu/shop-menu.component.jsx';
 import SignInSignUp from './components/signin-signup/signin-signup.component.jsx';
 import { auth, createUserProfileDoc } from './firebase/firebase.utils.js';
-import setCurrentUser from './redux/user/user.actions.js';
+import { setCurrentUser } from './redux/user/user.actions.js';
 
 import './App.styles.css';
 
@@ -61,7 +61,7 @@ const mapStateToProps = ({ user }) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  setCurrentUser: user => dispatch(setCurrentUser(user))
+  setCurrentUser: user => dispatch(setCurrentUser(user)),
 });
 
 
