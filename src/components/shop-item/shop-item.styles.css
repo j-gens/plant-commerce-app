@@ -3,6 +3,7 @@
   flex-direction: column;
   height: 320px;
   width: 23%;
+  position: relative;
 }
 
 .shop-item-image {
@@ -13,8 +14,12 @@
   margin-bottom: 5px;
 }
 
-.shop-item-image:hover {
-  opacity: 0.5;
+.shop-item-bin:hover .shop-item-image {
+  opacity: 0.6;
+}
+
+.shop-item-bin:hover .form-button {
+  opacity: .8;
 }
 
 .shop-item-text {
@@ -22,4 +27,12 @@
   justify-content: space-between;
   height: 5%;
   font-size: 18px;
+}
+
+.form-button {
+  width: 80%;
+  position: absolute;
+  top: 230px;
+  right: 10%;
+  opacity: 0;
 }
