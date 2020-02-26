@@ -1,5 +1,6 @@
 import React from 'react';
 
+import FormButton from '../form-button/form-button.component.jsx';
 import './shop-item.styles.css';
 
 
@@ -10,6 +11,7 @@ const ShopItem = ({ id, name, imageUrl, price }) => (
       <span className="item-name">{name.toUpperCase()}</span>
       <span className="item-price">${price}</span>
     </div>
+    <FormButton inverted>add to cart</FormButton>
   </div>
 );
 
