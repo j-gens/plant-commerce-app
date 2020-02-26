@@ -18,3 +18,7 @@
   flex-direction: column;
   height: 250px;
 }
+
+.cart-dropdown .form-button {
+  margin-top: auto;
+}
