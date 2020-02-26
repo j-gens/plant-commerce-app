@@ -1,13 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import FormButton from '../form-button/form-button.component.jsx';
+import CartItem from '../cart-item/cart-item.component.jsx';
 import './cart-dropdown.styles.css';
 
 
-const CartDropdown = () => (
+const CartDropdown = ({ cartItems }) => (
   <div className="cart-dropdown">
     <div className="cart-items">
-
+      {cartItems.map((cartItem) =>
+        <CartItem key={cartItem.id} item={cartItem} />
+      )}
     </div>
     <FormButton>
       checkout
@@ -15,5 +19,9 @@ const CartDropdown = () => (
   </div>
 );
 
+const mapStateToProps = ({ cart: { cartItems } }) => ({
+  cartItems,
+});
 
-export default CartDropdown;
+
+export default connect(mapStateToProps)(CartDropdown);
