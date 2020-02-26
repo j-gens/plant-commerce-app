@@ -24,3 +24,15 @@
   color: white;
   border: none;
 }
+
+.inverted {
+  color: black;
+  background-color: white;
+  border: solid 2px black;
+}
+
+.inverted:hover {
+  color: white;
+  background-color: black;
+  border: none;
+}
