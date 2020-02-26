@@ -9,7 +9,7 @@ import { auth } from '../../firebase/firebase.utils.js';
 import './header.styles.css';
 
 
-const Header = ({ currentUser }) => (
+const Header = ({ currentUser, isHidden }) => (
   <div className="header-bin">
     <div className="header-logo">
       <Link to="/">LOGO</Link>
@@ -25,12 +25,13 @@ const Header = ({ currentUser }) => (
       }
       <CartIcon />
     </div>
-    <CartDropdown />
+    {isHidden ? null : <CartDropdown />}
   </div>
 );
 
 const mapStateToProps = (state) => ({
   currentUser: state.user.currentUser,
+  isHidden: state.cart.isHidden,
 })
 
 
