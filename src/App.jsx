@@ -8,6 +8,7 @@ import ShopMenu from './components/shop-menu/shop-menu.component.jsx';
 import SignInSignUp from './components/signin-signup/signin-signup.component.jsx';
 import { auth, createUserProfileDoc } from './firebase/firebase.utils.js';
 import { setCurrentUser } from './redux/user/user.actions.js';
+import { currentUserSelector } from './redux/user/user.selectors.js';
 
 import './App.styles.css';
 
@@ -56,8 +57,8 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser,
+const mapStateToProps = (state) => ({
+  currentUser: currentUserSelector(state),
 })
 
 const mapDispatchToProps = (dispatch) => ({
