@@ -7,6 +7,7 @@ import Header from './components/header/header.component.jsx';
 import HomeMenu from './components/home-menu/home-menu.component.jsx';
 import ShopMenu from './components/shop-menu/shop-menu.component.jsx';
 import SignInSignUp from './components/signin-signup/signin-signup.component.jsx';
+import Checkout from './components/checkout/checkout.component.jsx';
 import { auth, createUserProfileDoc } from './firebase/firebase.utils.js';
 import { setCurrentUser } from './redux/user/user.actions.js';
 import { currentUserSelector } from './redux/user/user.selectors.js';
@@ -52,6 +53,7 @@ class App extends React.Component {
           <Route exact path="/" component={HomeMenu} />
           <Route path="/shop" component={ShopMenu} />
           <Route exact path="/signin" render={() => currentUser ? (<Redirect to="/" />) : (<SignInSignUp />)} />
+          <Route exact path="/checkout" component={Checkout} />
         </Switch>
       </div>
     );
