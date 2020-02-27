@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import FormButton from '../form-button/form-button.component.jsx';
 import { addCartItem } from '../../redux/cart/cart.actions.js';
+
 import './shop-item.styles.css';
 
 

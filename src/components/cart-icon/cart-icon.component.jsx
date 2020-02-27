@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { cartItemCountSelector } from '../../redux/cart/cart.selectors.js';
 import { toggleCartHidden } from '../../redux/cart/cart.actions.js';
+
 import './cart-icon.styles.css';
 
 
