@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { clearCartItem } from '../../redux/cart/cart.actions.js';
+import { clearCartItem, removeCartItem, addCartItem } from '../../redux/cart/cart.actions.js';
 
 import './checkout-item.styles.css';
 
 
-const CheckoutItem = ({ item, clearCartItem }) => {
+const CheckoutItem = ({ item, clearCartItem, addCartItem, removeCartItem }) => {
   const { imageUrl, name, price, quantity } = item;
   return (
     <div className="checkout-item-bin">
@@ -14,16 +14,18 @@ const CheckoutItem = ({ item, clearCartItem }) => {
         <img src={imageUrl} alt={name} />
       </div>
       <div className="ch-item-block">
-        <span>{name}</span>
+        {name}
+      </div>
+      <div className="ch-item-block quantity">
+        <div className="change-quantity" onClick={() => removeCartItem(item)}>&#10096;</div>
+        {quantity}
+        <div className="change-quantity" onClick={() => addCartItem(item)}>&#10097;</div>
       </div>
       <div className="ch-item-block">
-        <span>{quantity}</span>
+        ${price}
       </div>
-      <div className="ch-item-block">
-        <span>${price}</span>
-      </div>
-      <div className="ch-item-block">
-        <span className="ch-remove" onClick={() => clearCartItem(item)}>&#10005;</span>
+      <div className="ch-item-block remove" onClick={() => clearCartItem(item)}>
+        &#10005;
       </div>
     </div>
   );
@@ -31,6 +33,8 @@ const CheckoutItem = ({ item, clearCartItem }) => {
 
 const mapDispatchToProps = (dispatch) => ({
   clearCartItem: (item) => dispatch(clearCartItem(item)),
+  removeCartItem: (item) => dispatch(removeCartItem(item)),
+  addCartItem: (item) => dispatch(addCartItem(item)),
 });
 
 
