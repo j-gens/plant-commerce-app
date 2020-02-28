@@ -18,6 +18,18 @@
   object-fit: contain;
 }
 
-.ch-remove {
+.quantity {
+  display: flex;
+  justify-content: center;
+}
+
+.change-quantity {
   cursor: pointer;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.remove {
+  cursor: pointer;
+  font-size: 30px;
 }
