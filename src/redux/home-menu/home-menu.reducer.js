@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-  homeMenu: [
+  sections: [
     {id: 1, title: 'hats', imageUrl: 'pug-background.jpg' , size: '', linkUrl: 'hats'},
     {id: 2, title: 'jackets', imageUrl: 'pug-background.jpg', size: '', linkUrl: 'jackets'},
     {id: 3, title: 'sneakers', imageUrl: 'pug-background.jpg', size: '', linkUrl: 'sneakers'},
