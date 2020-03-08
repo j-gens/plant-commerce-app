@@ -20,4 +20,5 @@ const mapStateToProps = createStructuredSelector({
   sections: sectionsSelector,
 })
 
+
 export default connect(mapStateToProps)(HomeMenu);
