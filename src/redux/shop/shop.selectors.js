@@ -8,6 +8,11 @@ export const shopDataSelector = createSelector(
   (shop) => shop.shopData,
 );
 
+export const createPreviewSelector = createSelector(
+  [shopDataSelector],
+  (shopData) => Object.keys(shopData).map((key) => shopData[key]),
+);
+
 export const collectionSelector = (collectionUrlParam) => {
   return createSelector(
     [shopDataSelector],
