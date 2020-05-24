@@ -1,4 +1,4 @@
-import SHOP_DATA from '../../data/shopData.js';
+import SHOP_DATA from '../../data/shopData';
 
 
 const INITIAL_STATE = {
