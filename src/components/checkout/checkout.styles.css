@@ -29,3 +29,14 @@
   margin-top: 20px;
   font-size: 24px;
 }
+
+.test-warning {
+  color: red;
+  text-align: center;
+  margin: 20px;
+}
+
+.checkout-bin button {
+  width: 20vw;
+  align-self: center;
+}
