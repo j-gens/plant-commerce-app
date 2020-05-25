@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import HomeMenuItem from '../home-menu-item/home-menu-item.component.jsx';
-import { sectionsSelector } from '../../redux/home-menu/home-menu.selectors.js';
+import sectionsSelector from '../../redux/home-menu/home-menu.selectors.js';
 
 import './home-menu.styles.css';
 

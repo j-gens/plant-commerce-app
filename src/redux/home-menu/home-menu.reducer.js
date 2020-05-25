@@ -1,19 +1,19 @@
 const INITIAL_STATE = {
   sections: [
     {
-      id: 1, title: 'hats', imageUrl: 'pug-background.jpg', size: '', linkUrl: 'shop/hats',
+      id: 1, title: 'succulents', imageUrl: 'https://plant-commerce-app.s3-us-west-1.amazonaws.com/s-1.jpg', size: '', linkUrl: 'shop/succulents',
     },
     {
-      id: 2, title: 'jackets', imageUrl: 'pug-background.jpg', size: '', linkUrl: 'shop/jackets',
+      id: 2, title: 'cacti', imageUrl: 'https://plant-commerce-app.s3-us-west-1.amazonaws.com/c-1.jpg', size: '', linkUrl: 'shop/cacti',
     },
     {
-      id: 3, title: 'sneakers', imageUrl: 'pug-background.jpg', size: '', linkUrl: 'shop/sneakers',
+      id: 3, title: 'ferns', imageUrl: 'https://plant-commerce-app.s3-us-west-1.amazonaws.com/f-1.jpg', size: '', linkUrl: 'shop/ferns',
     },
     {
-      id: 4, title: 'womens', imageUrl: 'pug-background.jpg', size: 'large', linkUrl: 'shop/womens',
+      id: 4, title: 'house plants', imageUrl: 'https://plant-commerce-app.s3-us-west-1.amazonaws.com/hp-1.jpg', size: 'large', linkUrl: 'shop/houseplants',
     },
     {
-      id: 5, title: 'mens', imageUrl: 'pug-background.jpg', size: 'large', linkUrl: 'shop/mens',
+      id: 5, title: 'flowers', imageUrl: 'https://plant-commerce-app.s3-us-west-1.amazonaws.com/ff-1.jpg', size: 'large', linkUrl: 'shop/flowers',
     },
   ],
 };

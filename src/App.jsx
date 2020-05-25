@@ -9,8 +9,8 @@ import ShopPage from './components/shop-page/shop-page.component.jsx';
 import SignInSignUp from './components/signin-signup/signin-signup.component.jsx';
 import Checkout from './components/checkout/checkout.component.jsx';
 import { auth, createUserProfileDoc } from './firebase/firebase.utils.js';
-import { setCurrentUser } from './redux/user/user.actions.js';
-import { currentUserSelector } from './redux/user/user.selectors.js';
+import setCurrentUser from './redux/user/user.actions.js';
+import currentUserSelector from './redux/user/user.selectors.js';
 
 import './App.styles.css';
 
