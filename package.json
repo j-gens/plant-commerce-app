@@ -1,11 +1,10 @@
 {
-  "name": "pug-commerce",
+  "name": "plant-commerce-app",
   "version": "1.0.0",
-  "description": "An e-commerce app for pug content",
+  "description": "The one-stop-shop for house plants, cacti, succulents and more!",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server/index.js & webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "start": "node server/index.js",
     "lint": "eslint --ignore-path .gitignore ."
@@ -29,10 +28,10 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
-    "reselect": "^4.0.0"
+    "reselect": "^4.0.0",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.9.6",
