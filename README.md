@@ -5,7 +5,7 @@
 * [Getting Started](https://github.com/j-gens/plant-commerce-app#getting-started)
 * [License](https://github.com/j-gens/plant-commerce-app#license)
 
-![alt house plants](https://plant-commerce-app.s3-us-west-1.amazonaws.com/hp-1.jpg)
+![alt house plants](https://j-gens-portfolio.s3-us-west-1.amazonaws.com/plantology-gen.jpg)
 
 ## Overview
 
