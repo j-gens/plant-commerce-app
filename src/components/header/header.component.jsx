@@ -15,7 +15,7 @@ import './header.styles.css';
 const Header = ({ currentUser, isHidden }) => (
   <div className="header-bin">
     <div className="header-logo">
-      <Link to="/">PLANTOLOGY</Link>
+      <Link to="/">Plantology</Link>
     </div>
     <div className="header-options">
       <Link className="option" to="/shop">SHOP</Link>
