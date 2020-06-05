@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -43,23 +42,6 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.SplitChunksPlugin(),
-    // new HTMLWebpackPlugin(),
-    new HTMLWebpackPlugin({
-      templateContent: `
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <title>Plantology: Plant Commerce</title>
-            <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-            <base href="/">
-          </head>
-          <body>
-            <div id="root"></div>
-          </body>
-        </html>
-      `
-    }),
   ],
   watch: true,
   watchOptions: {
