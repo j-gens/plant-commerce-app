@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import Header from './components/header/header.component.jsx';
-import HomeMenu from './components/home-menu/home-menu.component.jsx';
-import ShopPage from './components/shop-page/shop-page.component.jsx';
-import Contact from './components/contact/contact.component.jsx';
-import SignInSignUp from './components/signin-signup/signin-signup.component.jsx';
-import Checkout from './components/checkout/checkout.component.jsx';
+// import HomeMenu from './components/home-menu/home-menu.component.jsx';
+// import ShopPage from './components/shop-page/shop-page.component.jsx';
+// import Contact from './components/contact/contact.component.jsx';
+// import SignInSignUp from './components/signin-signup/signin-signup.component.jsx';
+// import Checkout from './components/checkout/checkout.component.jsx';
+
+const HomeMenu = lazy(() => import('./components/home-menu/home-menu.component.jsx'));
+const ShopPage = lazy(() => import('./components/shop-page/shop-page.component.jsx'));
+const Contact = lazy(() => import('./components/contact/contact.component.jsx'));
+const SignInSignUp = lazy(() => import('./components/signin-signup/signin-signup.component.jsx'));
+const Checkout = lazy(() => import('./components/checkout/checkout.component.jsx'));
+
 import { auth, createUserProfileDoc } from './firebase/firebase.utils.js';
 import setCurrentUser from './redux/user/user.actions.js';
 import currentUserSelector from './redux/user/user.selectors.js';
@@ -50,13 +57,15 @@ class App extends React.Component {
     return (
       <div className="homepage">
         <Header />
-        <Switch>
-          <Route exact path="/" component={HomeMenu} />
-          <Route path="/shop" component={ShopPage} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/signin" render={() => currentUser ? (<Redirect to="/" />) : (<SignInSignUp />)} />
-          <Route exact path="/checkout" component={Checkout} />
-        </Switch>
+        <Suspense fallback={<div>loading...</div>}>
+          <Switch>
+            <Route exact path="/" component={HomeMenu} />
+            <Route path="/shop" component={ShopPage} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/signin" render={() => currentUser ? (<Redirect to="/" />) : (<SignInSignUp />)} />
+            <Route exact path="/checkout" component={Checkout} />
+          </Switch>
+        </Suspense>
       </div>
     );
   }
