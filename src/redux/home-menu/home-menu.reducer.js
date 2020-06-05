@@ -10,7 +10,7 @@ const INITIAL_STATE = {
       id: 3, title: 'ferns', imageUrl: 'https://plant-commerce-app.s3-us-west-1.amazonaws.com/f-1.jpg', size: '', linkUrl: 'shop/ferns',
     },
     {
-      id: 4, title: 'house plants', imageUrl: 'https://plant-commerce-app.s3-us-west-1.amazonaws.com/hp-1.jpg', size: 'large', linkUrl: 'shop/houseplants',
+      id: 4, title: 'plants', imageUrl: 'https://plant-commerce-app.s3-us-west-1.amazonaws.com/hp-1.jpg', size: 'large', linkUrl: 'shop/plants',
     },
     {
       id: 5, title: 'flowers', imageUrl: 'https://plant-commerce-app.s3-us-west-1.amazonaws.com/ff-1.jpg', size: 'large', linkUrl: 'shop/flowers',
