@@ -1,11 +1,15 @@
 const path = require('path');
+const webpack = require('webpack');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   entry: './src/index.jsx',
   output: {
-    filename: 'bundled.js',
-    path: path.resolve(__dirname, 'public/dist'),
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -20,7 +24,9 @@ module.exports = {
             '@babel/preset-react', '@babel/preset-env',
           ],
           plugins: [
-            '@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime',
+            '@babel/plugin-proposal-class-properties',
+            '@babel/plugin-transform-runtime',
+            '@babel/plugin-syntax-dynamic-import',
           ],
         },
       },
@@ -35,6 +41,26 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.optimize.SplitChunksPlugin(),
+    // new HTMLWebpackPlugin(),
+    new HTMLWebpackPlugin({
+      templateContent: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>Plantology: Plant Commerce</title>
+            <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+            <base href="/">
+          </head>
+          <body>
+            <div id="root"></div>
+          </body>
+        </html>
+      `
+    }),
+  ],
   watch: true,
   watchOptions: {
     ignored: /node_modules/,
