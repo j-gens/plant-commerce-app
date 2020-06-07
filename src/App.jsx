@@ -4,12 +4,6 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import Header from './components/header/header.component.jsx';
-// import HomeMenu from './components/home-menu/home-menu.component.jsx';
-// import ShopPage from './components/shop-page/shop-page.component.jsx';
-// import Contact from './components/contact/contact.component.jsx';
-// import SignInSignUp from './components/signin-signup/signin-signup.component.jsx';
-// import Checkout from './components/checkout/checkout.component.jsx';
-
 const HomeMenu = lazy(() => import('./components/home-menu/home-menu.component.jsx'));
 const ShopPage = lazy(() => import('./components/shop-page/shop-page.component.jsx'));
 const Contact = lazy(() => import('./components/contact/contact.component.jsx'));
