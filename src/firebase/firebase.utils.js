@@ -51,6 +51,21 @@ export const createUserProfileDoc = async (userObj, additionalData) => {
 };
 
 
+// upload collection(s) to Firestore so we don't have to do it manually
+export const addCollectionToFirestore = async (colKey, itemsToAdd) => {
+  // get a new write batch
+  const batch = firestore.batch();
+  itemsToAdd.forEach((item) => {
+    // let Firestore generate a new reference id for each doc
+    let newDocReference = firestore.collection(colKey).doc();
+    // set new reference with each object
+    batch.set(newDocReference, item);
+  });
+  // returns a promise
+  return await batch.commit();
+}
+
+
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
