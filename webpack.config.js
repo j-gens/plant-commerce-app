@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.jsx',
   output: {
     filename: '[name].bundle.js',
@@ -43,7 +42,6 @@ module.exports = {
   plugins: [
     new webpack.optimize.SplitChunksPlugin(),
   ],
-  watch: true,
   watchOptions: {
     ignored: /node_modules/,
   },
