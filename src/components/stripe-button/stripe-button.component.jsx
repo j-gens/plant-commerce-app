@@ -13,7 +13,7 @@ const StripeButton = ({ price }) => {
 
   return (
     <StripeCheckout
-      name='LOGO'
+      name='Plantology'
       description={`your total is $${price}`}
       image=''
       panelLabel='Pay Now'
