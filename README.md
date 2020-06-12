@@ -11,6 +11,13 @@
 
 Your destination for house plants, cacti, succulents and more!
 
+Check out the live version of this app: [Plantology](ec2-54-151-26-136.us-west-1.compute.amazonaws.com)
+
+#### My Contribution
+
+* Designed and built React front end with Redux for state management; improved app performance by implementing route-based code-splitting and lazy loading techniques
+* Utilized Google Firebase for authentication, Cloud Firestore for data storage, and integrated with Stripe API for payment processing
+
 ## Technologies
 
 * JavaScript
@@ -23,6 +30,7 @@ Your destination for house plants, cacti, succulents and more!
 * Node/Express
 * Firebase
 * Stripe
+* AWS - EC2 & S3
 
 ## Getting Started
 
@@ -52,7 +60,7 @@ npm run-script build
 ```
 npm start
 ```
-7. View in browser by going to [http://localhost:4000](http://localhost:4000)
+7. View in browser by going to [http://localhost:3100](http://localhost:3100)
 
 ## License
 
