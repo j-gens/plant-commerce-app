@@ -1,4 +1,5 @@
-# Plant Commerce App
+# Plantology
+## Botanical Commerce App
 
 * [Overview](https://github.com/j-gens/plant-commerce-app#overview)
 * [Technologies](https://github.com/j-gens/plant-commerce-app#technologies)
@@ -11,7 +12,7 @@
 
 Your destination for house plants, cacti, succulents and more!
 
-Check out the live version of this app: [Plantology](ec2-54-151-26-136.us-west-1.compute.amazonaws.com)
+Check out the demo version of this app: [Plantology](ec2-54-151-26-136.us-west-1.compute.amazonaws.com)
 
 #### My Contribution
 
