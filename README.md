@@ -12,7 +12,7 @@
 
 Your destination for house plants, cacti, succulents and more!
 
-Check out the demo version of this app: [Plantology](ec2-54-151-26-136.us-west-1.compute.amazonaws.com)
+Check out the demo version of this app: [Plantology](http://ec2-54-151-26-136.us-west-1.compute.amazonaws.com)
 
 #### My Contribution
 
