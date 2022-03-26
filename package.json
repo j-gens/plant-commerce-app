@@ -47,7 +47,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "minimist": ">=1.2.3",
+    "minimist": ">=1.2.6",
     "nodemon": "^2.0.4",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
